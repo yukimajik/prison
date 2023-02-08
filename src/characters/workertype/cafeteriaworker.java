@@ -1,4 +1,4 @@
-package workertype;
+package characters.workertype;
 
 public class cafeteriaworker {
 }

@@ -1,7 +1,7 @@
 package characters;
 
 import game.gamelogic;
-import weapons.superweapon;
+
 public  class player extends person{
 
     public int numatkupgrade, numdefupgrade, numspeedupgrade;
@@ -15,7 +15,7 @@ public  class player extends person{
         this.numatkupgrade = 0;
         this.numdefupgrade = 0;
         this.numspeedupgrade = 0;
-        ChoseTrait();
+        ChooseTrait();
     }
 
     @Override
@@ -32,19 +32,19 @@ public  class player extends person{
     public int run() {
         return 0;
     }
-    public void ChoseTrait(){
+    public void ChooseTrait(){
         gamelogic.clearconsole();
         gamelogic.heading("Choose a trait:");
-        System.out.println("(0) " + atk[numatkupgrade]);
-        System.out.println("(1) " + def[numdefupgrade]);
-        System.out.println("(2) " + speed[numspeedupgrade]);
+        System.out.println("(1) " + atk[numatkupgrade]);
+        System.out.println("(2) " + def[numdefupgrade]);
+        System.out.println("(3) " + speed[numspeedupgrade]);
 
-        int input = gamelogic.readint(" -->", 2);
+        int input = gamelogic.readint(" -->", 3);
         gamelogic.clearconsole();
-        if(input == 0){
+        if(input == 1){
             gamelogic.heading("you chose  " + atk[numatkupgrade]);
         }
-        else if (input == 1) {
+        else if (input == 2) {
             gamelogic.heading("you chose  " + def[numdefupgrade]);
         }else{
             gamelogic.heading("you chose  " + speed[numspeedupgrade]);
