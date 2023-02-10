@@ -1,4 +1,5 @@
 package items.util;
+import items.harmful.weaponinfo;
 
 public class util {
     private int heal = 0;
@@ -13,7 +14,15 @@ public class util {
         this.name = name;
         this.description = description;
     }
+    static util[] randomutil = {utilinfo.medKit,utilinfo.bandage,utilinfo.needle,utilinfo.pills};
 
+
+    public static util getitem(){
+        int randomnumber = (int)(Math.random()*4);
+        randomutil[randomnumber].addCount();
+        return randomutil[randomnumber];
+
+    }
     public String toString() {
         return this.getName() + ":" + "\n" + this.getDescription() + "\nYou have:" + this.getCount() + "\nHeals: " + this.getHeal();
     }

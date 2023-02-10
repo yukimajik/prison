@@ -14,8 +14,25 @@ public class weapons {
         this.description = description;
     }
 
+    public static weapons curentweapon = weapons.getweapon();
+
+
+    public static weapons getweapon() {
+        int randomnumber = 0;
+        for (int i = 0; i < 10; i++) {
+            randomnumber = (int) (Math.random() * weaponinfo.weaponslist.length);
+        }
+        curentweapon = weaponinfo.weaponslist[randomnumber];
+
+        return curentweapon;
+    }
+
+    public static weapons Curentweapon() {
+        return curentweapon;
+    }
+
     public String toString() {
-        return this.getName() + ":" + "\n" + this.getDescription() + "\nDeals:" + this.getDmg() + "\nHeals: " + this.getHeal();
+        return this.getName() + ":" + "\n" + this.getDescription() + "\nDeals: " + this.getDmg() + " dmg\nHeals: " + this.getHeal() + " dmg";
     }
 
     public int getDmg() {

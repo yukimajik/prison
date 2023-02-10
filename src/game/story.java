@@ -17,6 +17,7 @@ public class story {
         System.out.println("A terrifying territory that you have never encountered before. . .");
         System.out.println("Everyone here is dangerous. . .");
         System.out.println("You must be cautious. . .");
+        gamelogic.presstocontinue();
     }
     public static void printjailCell(){
         gamelogic.clearconsole();
